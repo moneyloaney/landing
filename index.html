@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Money Loaney | Préstamos Rápidos Online</title>
+
+<!-- Fuente futurista Orbitron de Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+
+<style>
+/* RESET */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+background: #0a0f0c; /* fondo negro verdoso */
+color: #b3ffb3; /* verde neón pálido */
+font-family: 'Orbitron', sans-serif;
+line-height: 1.6;
+scroll-behavior: smooth;
+overflow-x: hidden;
+}
+
+a {
+color: #33ff77;
+text-decoration: none;
+transition: color 0.3s ease;
+}
+
+a:hover {
+color: #1aff4f;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+width: 90%;
+max-width: 1200px;
+margin: 0 auto;
+padding-top: 80px; /* espacio para menú fijo */
+}
+
+/* MENÚ FIJO */
+nav {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background: #08110a;
+border-bottom: 2px solid #1aff4f;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 50px;
+z-index: 9999;
+box-shadow: 0 0 15px #1aff4f88;
+backdrop-filter: saturate(180%) blur(8px);
+}
+
+nav .logo {
+font-size: 1.8rem;
+font-weight: 700;
+color: #33ff77;
+letter-spacing: 2px;
+text-shadow:
+0 0 6px #33ff77,
+0 0 12px #1aff4f,
+0 0 20px #00ff44;
+cursor: default;
+user-select: none;
+}
+
+nav ul {
+list-style: none;
+display: flex;
+gap: 35px;
+}
+
+nav ul li {
+font-weight: 500;
+font-size: 1.1rem;
+position: relative;
+}
+
+nav ul li a {
+padding: 6px 8px;
+border-radius: 6px;
+transition: background-color 0.4s ease;
+text-shadow: 0 0 4px #00ff44;
+}
+
+nav ul li a:hover {
+background-color: #1aff4f33;
+box-shadow:
+0 0 8px #00ff44,
+0 0 12px #1aff4f;
+color: #00ff44;
+}
+
+/* ANIMACIÓN NEÓN CABECERA */
+header h1 {
+font-size: 3rem;
+font-weight: 700;
+color: #00ff44;
+text-align: center;
+margin-bottom: 0.5rem;
+text-shadow:
+0 0 6px #00ff44,
+0 0 12px #33ff77,
+0 0 24px #00ff44,
+0 0 40px #1aff4f;
+animation: neonGlow 2.5s ease-in-out infinite alternate;
+user-select: none;
+}
+
+@keyframes neonGlow {
+0% {
+text-shadow:
+0 0 6px #00ff44,
+0 0 12px #33ff77,
+0 0 24px #00ff44,
+0 0 40px #1aff4f;
+color: #33ff77;
+}
+100% {
+text-shadow:
+0 0 20px #00ff44,
+0 0 30px #33ff77,
+0 0 40px #00ff44,
+0 0 60px #1aff4f;
+color: #00ff44;
+}
+}
+
+header p {
+font-size: 1.3rem;
+text-align: center;
+margin-bottom: 1.5rem;
+color: #9cff9caa;
+text-shadow: 0 0 3px #33ff77;
+user-select: none;
+}
+
+/* BOTÓN NEÓN */
+.btn {
+display: inline-block;
+background: linear-gradient(45deg, #00ff44, #33ff77);
+color: #0a0f0c;
+font-weight: 700;
+padding: 15px 35px;
+border-radius: 30px;
+font-size: 1.3rem;
+cursor: pointer;
+user-select: none;
+margin: 0 auto;
+box-shadow:
+0 0 10px #00ff44,
+0 0 25px #33ff77;
+transition: all 0.3s ease;
+text-align: center;
+text-shadow: none;
+display: block;
+width: fit-content;
+}
+
+.btn:hover {
+box-shadow:
+0 0 20px #1aff4f,
+0 0 40px #33ff77,
+0 0 60px #00ff44;
+transform: scale(1.07);
+color: #000;
+background: linear-gradient(45deg, #1aff4f, #22ff66);
+text-shadow: 0 0 8px #000000aa;
+}
+
+/* CONTENEDOR CENTRADO */
+.centered {
+text-align: center;
+margin-bottom: 50px;
+}
+
+/* FLEX CONTENEDORES */
+.flex {
+display: flex;
+gap: 20px;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+nav {
+padding: 12px 25px;
+}
+
+nav ul {
+gap: 20px;
+}
+
+header h1 {
+font-size: 2.1rem;
+}
+
+header p {
+font-size: 1.1rem;
+}
+
+.btn {
+font-size: 1.1rem;
+padding: 12px 25px;
+}
+}
+
+@media (max-width: 480px) {
+nav ul {
+flex-direction: column;
+gap: 10px;
+background: #08110a;
+position: absolute;
+top: 60px;
+right: 10px;
+padding: 15px 20px;
+border-radius: 10px;
+display: none;
+}
+
+nav ul.show {
+display: flex;
+}
+
+nav .menu-toggle {
+display: block;
+cursor: pointer;
+font-size: 1.8rem;
+color: #33ff77;
+}
+}
+</style>
+</head>
+<body>
+<nav>
+<div class="logo">Money Loaney</div>
+<ul id="menu">
+<li><a href="#hero">Inicio</a></li>
+<li><a href="#formulario">Solicitar</a></li>
+<li><a href="#productos">Productos</a></li>
+<li><a href="#testimonios">Testimonios</a></li>
+<li><a href="#blog">Blog</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+<div class="menu-toggle" id="menu-toggle">&#9776;</div>
+</nav>
+
+<header id="hero" class="centered">
+<h1>Préstamos rápidos<br> hasta 500 € en minutos</h1>
+<p>Sin bancos. Sin papeleos. Validación del 95 % al instante.</p>
+<a href="#formulario" class="btn">Solicitar ahora</a>
+</header>
+
+<script>
+// Toggle menú móvil
+const menuToggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
+
+menuToggle.addEventListener('click', () => {
+menu.classList.toggle('show');
+});
+</script>
+</body>
+</html>
+<!-- BLOQUE 2: Hero animado con slider y contador -->
+<section id="hero" style="position: relative; padding: 100px 0; background: linear-gradient(135deg, #001100 0%, #004400 100%); color: #b3ffb3; text-align: center; overflow: hidden;">
+
+<div style="max-width: 800px; margin: 0 auto; position: relative; z-index: 10;">
+<h2 id="typing-text" style="font-family: 'Orbitron', sans-serif; font-size: 2.8rem; font-weight: 700; min-height: 4rem; margin-bottom: 20px; text-shadow: 0 0 10px #00ff44;">Préstamos rápidos</h2>
+
+<div id="slider-messages" style="font-size: 1.4rem; margin-bottom: 30px; min-height: 2.2rem; color: #33ff77; text-shadow: 0 0 6px #33ff77;"></div>
+
+<div id="countdown" style="font-family: monospace; font-size: 2rem; color: #00ff44; text-shadow: 0 0 15px #00ff44;"></div>
+
+<a href="#formulario" class="btn" style="margin-top: 30px;">Solicita tu préstamo YA</a>
+</div>
+
+<!-- Fondo animado sutil -->
+<canvas id="hero-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;"></canvas>
+</section>
+
+<script>
+// Máquina de escribir para h2
+const text = "Préstamos rápidos hasta 500€ en minutos";
+let index = 0;
+const typingSpeed = 80;
+const typingElement = document.getElementById('typing-text');
+
+function typeWriter() {
+if (index < text.length) {
+typingElement.textContent += text.charAt(index);
+index++;
+setTimeout(typeWriter, typingSpeed);
+}
+}
+typingElement.textContent = "";
+typeWriter();
+
+// Slider de mensajes
+const sliderMessages = [
+"Sin bancos. Sin papeleos.",
+"95% de aprobación inmediata.",
+"Dinero en tu cuenta en minutos.",
+"Hasta 500€ sin complicaciones."
+];
+let sliderIndex = 0;
+const sliderElement = document.getElementById('slider-messages');
+
+function showSliderMessage() {
+sliderElement.style.opacity = 0;
+setTimeout(() => {
+sliderElement.textContent = sliderMessages[sliderIndex];
+sliderElement.style.opacity = 1;
+sliderIndex = (sliderIndex + 1) % sliderMessages.length;
+}, 500);
+}
+showSliderMessage();
+setInterval(showSliderMessage, 4000);
+
+// Contador regresivo (Ejemplo: 24h desde ahora)
+const countdownElement = document.getElementById('countdown');
+const deadline = new Date(Date.now() + 24*60*60*1000); // 24h a partir de carga
+
+function updateCountdown() {
+const now = new Date();
+const diff = deadline - now;
+
+if(diff <= 0) {
+countdownElement.textContent = "¡Oferta terminada!";
+clearInterval(interval);
+return;
+}
+
+const hrs = Math.floor(diff / (1000 * 60 * 60));
+const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+countdownElement.textContent = `Oferta válida por: ${hrs.toString().padStart(2,'0')}h : ${mins.toString().padStart(2,'0')}m : ${secs.toString().padStart(2,'0')}s`;
+}
+
+updateCountdown();
+const interval = setInterval(updateCountdown, 1000);
+
+// Fondo canvas animado (partículas verdes suaves)
+const canvas = document.getElementById('hero-canvas');
+const ctx = canvas.getContext('2d');
+let width, height;
+let particles = [];
+
+function initCanvas() {
+width = canvas.width = window.innerWidth;
+height = canvas.height = 400; // ajusta altura de sección
+particles = [];
+for(let i=0; i<60; i++) {
+particles.push({
+x: Math.random() * width,
+y: Math.random() * height,
+radius: Math.random() * 2 + 1,
+speedX: (Math.random() - 0.5) * 0.5,
+speedY: (Math.random() - 0.5) * 0.5,
+alpha: Math.random() * 0.5 + 0.3
+});
+}
+}
+
+function drawParticles() {
+ctx.clearRect(0, 0, width, height);
+particles.forEach(p => {
+ctx.beginPath();
+ctx.fillStyle = `rgba(0, 255, 68, ${p.alpha})`;
+ctx.shadowColor = 'rgba(0, 255, 68, 0.8)';
+ctx.shadowBlur = 8;
+ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+ctx.fill();
+
+p.x += p.speedX;
+p.y += p.speedY;
+
+if (p.x < 0 || p.x > width) p.speedX *= -1;
+if (p.y < 0 || p.y > height) p.speedY *= -1;
+});
+
+requestAnimationFrame(drawParticles);
+}
+
+window.addEventListener('resize', () => {
+initCanvas();
+});
+
+initCanvas();
+drawParticles();
+</script>
+<!-- BLOQUE 3: Formulario multi paso -->
+<section id="formulario" style="background:#08110a; color:#b3ffb3; padding:60px 0;">
+<div class="container" style="max-width:600px; margin:auto;">
+
+<h2 style="font-family:'Orbitron', sans-serif; font-weight:700; text-align:center; margin-bottom:40px; text-shadow:0 0 10px #00ff44;">
+Solicita tu préstamo rápido
+</h2>
+
+<form id="loanForm" novalidate style="background:#0a1a0a; padding:30px; border-radius:15px; box-shadow:0 0 20px #00ff44;">
+
+<!-- Paso 1 -->
+<fieldset class="form-step active">
+<label for="nombre">Nombre completo</label><br>
+<input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" autocomplete="name" style="width:100%; padding:12px; margin-bottom:20px; border-radius:8px; border:none; box-shadow: inset 0 0 5px #00ff44;">
+<small class="error" style="color:#ff4d4d; display:none;">Por favor, ingresa tu nombre.</small>
+
+<label for="email">Correo electrónico</label><br>
+<input type="email" id="email" name="email" required placeholder="ejemplo@mail.com" autocomplete="email" style="width:100%; padding:12px; margin-bottom:20px; border-radius:8px; border:none; box-shadow: inset 0 0 5px #00ff44;">
+<small class="error" style="color:#ff4d4d; display:none;">Email inválido.</small>
+
+<label for="telefono">Teléfono</label><br>
+<input type="tel" id="telefono" name="telefono" required placeholder="+34 600 000 000" autocomplete="tel" style="width:100%; padding:12px; margin-bottom:20px; border-radius:8px; border:none; box-shadow: inset 0 0 5px #00ff44;">
+<small class="error" style="color:#ff4d4d; display:none;">Teléfono inválido.</small>
+
+<button type="button" class="btn next-btn" style="margin-top:20px;">Siguiente</button>
+</fieldset>
+
+<!-- Paso 2 -->
+<fieldset class="form-step" style="display:none;">
+<label for="importe">Importe solicitado (€)</label><br>
+<input type="number" id="importe" name="importe" min="50" max="500" required placeholder="50 - 500" style="width:100%; padding:12px; margin-bottom:20px; border-radius:8px; border:none; box-shadow: inset 0 0 5px #00ff44;">
+<small class="error" style="color:#ff4d4d; display:none;">Importe inválido (50-500€).</small>
+
+<label for="plazo">Plazo (días)</label><br>
+<select id="plazo" name="plazo" required style="width:100%; padding:12px; margin-bottom:20px; border-radius:8px; background:#022002; color:#b3ffb3; border:none; box-shadow: inset 0 0 5px #00ff44;">
+<option value="" disabled selected>Selecciona plazo</option>
+<option value="15">15 días</option>
+<option value="30">30 días</option>
+<option value="45">45 días</option>
+</select>
+<small class="error" style="color:#ff4d4d; display:none;">Selecciona un plazo.</small>
+
+<button type="button" class="btn prev-btn" style="margin-right:20px;">Anterior</button>
+<button type="button" class="btn next-btn">Siguiente</button>
+</fieldset>
+
+<!-- Paso 3 -->
+<fieldset class="form-step" style="display:none;">
+<label>
+<input type="checkbox" id="terminos" name="terminos" required />
+<span style="margin-left:8px;">
+Acepto los <a href="#legal" style="color:#33ff77;">términos y condiciones</a> y la suscripción automática de 9,99 € cada 15 días.
+</span>
+</label>
+<small class="error" style="color:#ff4d4d; display:none;">Debes aceptar para continuar.</small>
+
+<button type="button" class="btn prev-btn" style="margin-right:20px;">Anterior</button>
+<button type="submit" class="btn" disabled id="submitBtn">Enviar solicitud</button>
+</fieldset>
+
+<!-- Mensaje de éxito -->
+<div id="successMessage" style="display:none; text-align:center; margin-top:20px; font-weight:bold; color:#1aff4f; text-shadow: 0 0 10px #1aff4f;">
+¡Solicitud enviada con éxito! Te contactaremos pronto.
+</div>
+</form>
+</div>
+
+<script>
+const form = document.getElementById('loanForm');
+const steps = Array.from(document.querySelectorAll('.form-step'));
+let currentStep = 0;
+
+const nextBtns = document.querySelectorAll('.next-btn');
+const prevBtns = document.querySelectorAll('.prev-btn');
+const submitBtn = document.getElementById('submitBtn');
+const successMessage = document.getElementById('successMessage');
+
+// Función validación simple
+function validateStep(step) {
+let valid = true;
+const inputs = steps[step].querySelectorAll('input, select');
+inputs.forEach(input => {
+const error = input.nextElementSibling;
+if(input.type === 'checkbox') {
+if(!input.checked) {
+error.style.display = 'block';
+valid = false;
+} else {
+error.style.display = 'none';
+}
+} else if(input.value.trim() === '' || (input.type === 'number' && (input.value < 50 || input.value > 500))) {
+error.style.display = 'block';
+valid = false;
+} else {
+error.style.display = 'none';
+}
+
+// Email validación simple
+if(input.type === 'email') {
+const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if(!re.test(input.value)) {
+error.style.display = 'block';
+valid = false;
+}
+}
+
+// Teléfono validación simple (números y +)
+if(input.type === 'tel') {
+const phoneRe = /^[+0-9\s\-]{7,15}$/;
+if(!phoneRe.test(input.value)) {
+error.style.display = 'block';
+valid = false;
+}
+}
+});
+return valid;
+}
+
+function showStep(step) {
+steps.forEach((fs, i) => {
+fs.style.display = i === step ? 'block' : 'none';
+});
+// Desactivar/enviar botón en último paso
+if(step === steps.length - 1) {
+submitBtn.disabled = true;
+// Validar checkbox para activar botón
+const terminos = document.getElementById('terminos');
+terminos.addEventListener('change', () => {
+submitBtn.disabled = !terminos.checked;
+});
+}
+}
+
+nextBtns.forEach(btn => {
+btn.addEventListener('click', () => {
+if(validateStep(currentStep)) {
+currentStep++;
+showStep(currentStep);
+}
+});
+});
+
+prevBtns.forEach(btn => {
+btn.addEventListener('click', () => {
+currentStep--;
+showStep(currentStep);
+});
+});
+
+form.addEventListener('submit', e => {
+e.preventDefault();
+if(validateStep(currentStep)) {
+// Aquí puedes conectar con backend o API
+form.style.display = 'none';
+successMessage.style.display = 'block';
+// Reset para pruebas:
+// currentStep = 0;
+// showStep(currentStep);
+// form.reset();
+}
+});
+
+showStep(currentStep);
+</script>
+</section>
+<!-- BLOQUE 4: Comparador camuflado -->
+<section id="productos" style="background:#0b1b0b; color:#b3ffb3; padding:60px 0;">
+
+<div class="container" style="max-width:1200px;">
+<h2 style="font-family:'Orbitron', sans-serif; font-weight:700; text-align:center; margin-bottom:40px; text-shadow:0 0 12px #00ff44;">
+Consigue tu préstamo rápido y seguro
+<br>
+<small style="font-size:0.8rem; color:#6bff6b88;">(Somos tu prestamista, no solo comparadora)</small>
+</h2>
+
+<div class="cards-wrapper" style="overflow-x: auto; scroll-behavior: smooth; padding-bottom: 10px; -webkit-overflow-scrolling: touch;">
+<div class="cards" style="display: flex; gap: 25px;">
+
+<!-- Tarjeta 1 -->
+<div class="card" style="min-width: 280px; background:#022002; border-radius: 15px; padding: 25px; box-shadow: 0 0 15px #00ff44; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer;">
+<h3 style="font-family:'Orbitron', sans-serif; font-weight:700; font-size:1.5rem; margin-bottom: 10px; color:#00ff44; text-shadow: 0 0 8px #1aff4f;">Money Loaney</h3>
+<p style="font-size: 1rem; margin-bottom: 15px;">Hasta 500€ en minutos, 95% aprobación.</p>
+<ul style="list-style:none; margin-bottom: 15px; padding-left: 0; font-size: 0.9rem; color:#9cff9c;">
+<li>• Sin papeleos</li>
+<li>• Plazos flexibles: 15-45 días</li>
+<li>• Aceptación rápida</li>
+</ul>
+<a href="#formulario" style="display: inline-block; padding: 12px 28px; border-radius: 30px; background: linear-gradient(45deg, #00ff44, #33ff77); color: #0a0f0c; font-weight: 700; box-shadow: 0 0 15px #00ff44; transition: all 0.3s ease; text-decoration: none; text-align: center;">Solicitar Ahora</a>
+</div>
+
+<!-- Tarjeta 2 -->
+<div class="card" style="min-width: 280px; background:#022002; border-radius: 15px; padding: 25px; box-shadow: 0 0 15px #00ff44; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer;">
+<h3 style="font-family:'Orbitron', sans-serif; font-weight:700; font-size:1.5rem; margin-bottom: 10px; color:#00ff44; text-shadow: 0 0 8px #1aff4f;">Vibus Express</h3>
+<p style="font-size: 1rem; margin-bottom: 15px;">Préstamos rápidos y sin complicaciones.</p>
+<ul style="list-style:none; margin-bottom: 15px; padding-left: 0; font-size: 0.9rem; color:#9cff9c;">
+<li>• Hasta 500€</li>
+<li>• Validación rápida</li>
+<li>• Pago en 5 minutos</li>
+</ul>
+<a href="https://vibus.es" target="_blank" rel="noopener" style="display: inline-block; padding: 12px 28px; border-radius: 30px; background: linear-gradient(45deg, #00ff44, #33ff77); color: #0a0f0c; font-weight: 700; box-shadow: 0 0 15px #00ff44; transition: all 0.3s ease; text-decoration: none; text-align: center;">Solicitar Ahora</a>
+</div>
+
+<!-- Tarjeta 3 -->
+<div class="card" style="min-width: 280px; background:#022002; border-radius: 15px; padding: 25px; box-shadow: 0 0 15px #00ff44; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer;">
+<h3 style="font-family:'Orbitron', sans-serif; font-weight:700; font-size:1.5rem; margin-bottom: 10px; color:#00ff44; text-shadow: 0 0 8px #1aff4f;">Moneyman</h3>
+<p style="font-size: 1rem; margin-bottom: 15px;">Préstamos rápidos con alta tasa de aprobación.</p>
+<ul style="list-style:none; margin-bottom: 15px; padding-left: 0; font-size: 0.9rem; color:#9cff9c;">
+<li>• Hasta 500€</li>
+<li>• Proceso rápido</li>
+<li>• Sin papeleos</li>
+</ul>
+<a href="https://moneyman.es" target="_blank" rel="noopener" style="display: inline-block; padding: 12px 28px; border-radius: 30px; background: linear-gradient(45deg, #00ff44, #33ff77); color: #0a0f0c; font-weight: 700; box-shadow: 0 0 15px #00ff44; transition: all 0.3s ease; text-decoration: none; text-align: center;">Solicitar Ahora</a>
+</div>
+
+<!-- Tarjeta 4 -->
+<div class="card" style="min-width: 280px; background:#022002; border-radius: 15px; padding: 25px; box-shadow: 0 0 15px #00ff44; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer;">
+<h3 style="font-family:'Orbitron', sans-serif; font-weight:700; font-size:1.5rem; margin-bottom: 10px; color:#00ff44; text-shadow: 0 0 8px #1aff4f;">Casper Loans</h3>
+<p style="font-size: 1rem; margin-bottom: 15px;">Tu dinero en minutos sin complicaciones.</p>
+<ul style="list-style:none; margin-bottom: 15px; padding-left: 0; font-size: 0.9rem; color:#9cff9c;">
+<li>• Hasta 500€</li>
+<li>• Respuesta rápida</li>
+<li>• Fácil aprobación</li>
+</ul>
+<a href="https://casperloans.com" target="_blank" rel="noopener" style="display: inline-block; padding: 12px 28px; border-radius: 30px; background: linear-gradient(45deg, #00ff44, #33ff77); color: #0a0f0c; font-weight: 700; box-shadow: 0 0 15px #00ff44; transition: all 0.3s ease; text-decoration: none; text-align: center;">Solicitar Ahora</a>
+</div>
+
+</div>
+</div>
+</div>
+
+<style>
+/* Scroll estilo */
+.cards-wrapper::-webkit-scrollbar {
+height: 8px;
+}
+.cards-wrapper::-webkit-scrollbar-track {
+background: #022002;
+border-radius: 10px;
+}
+.cards-wrapper::-webkit-scrollbar-thumb {
+background: #00ff44;
+border-radius: 10px;
+box-shadow: 0 0 10px #00ff44;
+}
+
+/* Hover efecto neón */
+.card:hover {
+transform: scale(1.05);
+box-shadow:
+0 0 30px #00ff44,
+0 0 40px #33ff77,
+0 0 50px #1aff4f;
+cursor: pointer;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+</style>
+
+</section>
+<!-- BLOQUE 5: Testimonios -->
+<section id="testimonios" style="background:#001a00; color:#b3ffb3; padding:60px 0;">
+<div class="container" style="max-width:900px; margin:auto; text-align:center;">
+
+<h2 style="font-family:'Orbitron', sans-serif; font-weight:700; margin-bottom:50px; text-shadow: 0 0 12px #00ff44;">
+Lo que dicen nuestros clientes
+</h2>
+
+<div class="testimonial-slider" style="display: flex; gap: 40px; overflow-x: auto; scroll-behavior: smooth; padding-bottom: 20px;">
+
+<!-- Testimonio 1 -->
+<div class="testimonial-card" style="min-width: 280px; background:#022002; border-radius: 15px; padding: 20px; box-shadow: 0 0 20px #00ff44;">
+<video width="100%" height="160" controls style="border-radius: 12px; box-shadow: 0 0 15px #33ff77;">
+<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+Tu navegador no soporta video.
+</video>
+<blockquote style="margin: 15px 0; font-style: italic; font-size: 1rem; color:#aaffaa;">
+"Gracias a Money Loaney conseguí el dinero que necesitaba en menos de 10 minutos. ¡Muy recomendado!"
+</blockquote>
+<div class="stars" style="color:#00ff44; font-size: 1.3rem; text-shadow: 0 0 8px #00ff44;">
+★★★★★
+</div>
+<p style="margin-top: 10px; font-weight: 700;">- Ana M.</p>
+</div>
+
+<!-- Testimonio 2 -->
+<div class="testimonial-card" style="min-width: 280px; background:#022002; border-radius: 15px; padding: 20px; box-shadow: 0 0 20px #00ff44;">
+<video width="100%" height="160" controls style="border-radius: 12px; box-shadow: 0 0 15px #33ff77;">
+<source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+Tu navegador no soporta video.
+</video>
+<blockquote style="margin: 15px 0; font-style: italic; font-size: 1rem; color:#aaffaa;">
+"Solicitar un préstamo fue rápido y sencillo. El servicio es excelente."
+</blockquote>
+<div class="stars" style="color:#00ff44; font-size: 1.3rem; text-shadow: 0 0 8px #00ff44;">
+★★★★☆
+</div>
+<p style="margin-top: 10px; font-weight: 700;">- Luis F.</p>
+</div>
+
+<!-- Testimonio 3 -->
+<div class="testimonial-card" style="min-width: 280px; background:#022002; border-radius: 15px; padding: 20px; box-shadow: 0 0 20px #00ff44;">
+<video width="100%" height="160" controls style="border-radius: 12px; box-shadow: 0 0 15px #33ff77;">
+<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+Tu navegador no soporta video.
+</video>
+<blockquote style="margin: 15px 0; font-style: italic; font-size: 1rem; color:#aaffaa;">
+"Muy fácil y rápido. Repetiré seguro."
+</blockquote>
+<div class="stars" style="color:#00ff44; font-size: 1.3rem; text-shadow: 0 0 8px #00ff44;">
+★★★★★
+</div>
+<p style="margin-top: 10px; font-weight: 700;">- Marta R.</p>
+</div>
+
+</div>
+</div>
+
+<style>
+/* Scroll estilo para testimonios */
+.testimonial-slider::-webkit-scrollbar {
+height: 6px;
+}
+.testimonial-slider::-webkit-scrollbar-track {
+background: #022002;
+border-radius: 10px;
+}
+.testimonial-slider::-webkit-scrollbar-thumb {
+background: #00ff44;
+border-radius: 10px;
+box-shadow: 0 0 8px #00ff44;
+}
+.testimonial-slider:hover {
+scrollbar-color: #00ff44 #022002;
+}
+</style>
+</section>
+<!-- BLOQUE 6: Cómo funciona -->
+<section id="como-funciona" style="background:#08110a; color:#b3ffb3; padding:60px 0; font-family:'Orbitron', sans-serif;">
+<div class="container" style="max-width:900px; margin:auto; text-align:center;">
+<h2 style="font-weight:700; margin-bottom:50px; font-size:2.5rem; text-shadow: 0 0 12px #00ff44;">
+¿Cómo funciona?
+</h2>
+
+<div class="steps" style="display:flex; flex-wrap: wrap; gap:40px; justify-content:center;">
+
+<div class="step" style="flex: 1 1 250px; background:#022002; border-radius:20px; padding:30px; box-shadow: 0 0 20px #00ff44; transition: transform 0.3s ease;">
+<div class="icon" style="font-size: 50px; margin-bottom:20px; color:#33ff77; filter: drop-shadow(0 0 6px #00ff44);">
+&#128100;
+</div>
+<h3 style="margin-bottom:15px; font-weight:700;">1. Completa tus datos</h3>
+<p style="color:#aaffaa; font-size:1rem;">
+Rellena el formulario con tu información básica para evaluar tu solicitud.
+</p>
+</div>
+
+<div class="step" style="flex: 1 1 250px; background:#022002; border-radius:20px; padding:30px; box-shadow: 0 0 20px #00ff44; transition: transform 0.3s ease;">
+<div class="icon" style="font-size: 50px; margin-bottom:20px; color:#33ff77; filter: drop-shadow(0 0 6px #00ff44);">
+&#128179;
+</div>
+<h3 style="margin-bottom:15px; font-weight:700;">2. Selecciona importe y plazo</h3>
+<p style="color:#aaffaa; font-size:1rem;">
+Escoge la cantidad que necesitas y el plazo que más te conviene.
+</p>
+</div>
+
+<div class="step" style="flex: 1 1 250px; background:#022002; border-radius:20px; padding:30px; box-shadow: 0 0 20px #00ff44; transition: transform 0.3s ease;">
+<div class="icon" style="font-size: 50px; margin-bottom:20px; color:#33ff77; filter: drop-shadow(0 0 6px #00ff44);">
+&#128640;
+</div>
+<h3 style="margin-bottom:15px; font-weight:700;">3. Obtén aprobación rápida</h3>
+<p style="color:#aaffaa; font-size:1rem;">
+Nuestra tecnología evalúa tu solicitud y en minutos te damos respuesta.
+</p>
+</div>
+
+<div class="step" style="flex: 1 1 250px; background:#022002; border-radius:20px; padding:30px; box-shadow: 0 0 20px #00ff44; transition: transform 0.3s ease;">
+<div class="icon" style="font-size: 50px; margin-bottom:20px; color:#33ff77; filter: drop-shadow(0 0 6px #00ff44);">
+&#128176;
+</div>
+<h3 style="margin-bottom:15px; font-weight:700;">4. Recibe tu dinero</h3>
+<p style="color:#aaffaa; font-size:1rem;">
+En minutos el dinero está disponible en tu cuenta bancaria.
+</p>
+</div>
+
+</div>
+</div>
+
+<style>
+/* Efecto hover para pasos */
+.step:hover {
+transform: scale(1.05);
+box-shadow:
+0 0 30px #00ff44,
+0 0 40px #33ff77,
+0 0 50px #1aff4f;
+cursor: default;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Responsive */
+@media(max-width: 800px) {
+.steps {
+flex-direction: column;
+gap: 30px;
+}
+.step {
+max-width: 90%;
+margin: 0 auto;
+}
+}
+</style>
+
+</section>
+<!-- BLOQUE 7: FAQ animado -->
+<section id="faq" style="background:#061006; color:#b3ffb3; padding:60px 0; font-family:'Orbitron', sans-serif;">
+<div class="container" style="max-width:800px; margin:auto;">
+<h2 style="font-weight:700; text-align:center; margin-bottom:50px; text-shadow: 0 0 12px #00ff44;">
+Preguntas frecuentes
+</h2>
+
+<div class="faq-item" style="margin-bottom: 20px; border-radius: 12px; background:#022002; box-shadow: 0 0 20px #00ff44;">
+<button class="faq-question" style="width: 100%; padding: 18px 25px; background:none; border:none; text-align:left; font-size:1.1rem; color:#aaffaa; cursor:pointer; font-weight:700; outline:none; box-shadow: inset 0 -2px 0 #00ff44;">
+¿Cómo solicito un préstamo?
+</button>
+<div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease; padding: 0 25px; color:#9cff9c; font-size: 0.95rem;">
+<p>Rellena el formulario con tus datos, selecciona el importe y plazo, y sigue los pasos para la aprobación rápida.</p>
+</div>
+</div>
+
+<div class="faq-item" style="margin-bottom: 20px; border-radius: 12px; background:#022002; box-shadow: 0 0 20px #00ff44;">
+<button class="faq-question" style="width: 100%; padding: 18px 25px; background:none; border:none; text-align:left; font-size:1.1rem; color:#aaffaa; cursor:pointer; font-weight:700; outline:none; box-shadow: inset 0 -2px 0 #00ff44;">
+¿Cuánto tiempo tarda la aprobación?
+</button>
+<div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease; padding: 0 25px; color:#9cff9c; font-size: 0.95rem;">
+<p>En la mayoría de los casos, la aprobación es en menos de 10 minutos.</p>
+</div>
+</div>
+
+<div class="faq-item" style="margin-bottom: 20px; border-radius: 12px; background:#022002; box-shadow: 0 0 20px #00ff44;">
+<button class="faq-question" style="width: 100%; padding: 18px 25px; background:none; border:none; text-align:left; font-size:1.1rem; color:#aaffaa; cursor:pointer; font-weight:700; outline:none; box-shadow: inset 0 -2px 0 #00ff44;">
+¿Qué documentos necesito para solicitar?
+</button>
+<div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease; padding: 0 25px; color:#9cff9c; font-size: 0.95rem;">
+<p>Solo tu DNI/NIE y una cuenta bancaria válida para recibir el dinero.</p>
+</div>
+</div>
+
+<div class="faq-item" style="margin-bottom: 20px; border-radius: 12px; background:#022002; box-shadow: 0 0 20px #00ff44;">
+<button class="faq-question" style="width: 100%; padding: 18px 25px; background:none; border:none; text-align:left; font-size:1.1rem; color:#aaffaa; cursor:pointer; font-weight:700; outline:none; box-shadow: inset 0 -2px 0 #00ff44;">
+¿Puedo cancelar el préstamo antes del plazo?
+</button>
+<div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease; padding: 0 25px; color:#9cff9c; font-size: 0.95rem;">
+<p>Sí, puedes cancelar el préstamo en cualquier momento sin penalizaciones.</p>
+</div>
+</div>
+
+</div>
+
+<script>
+// Script acordeón FAQ
+document.querySelectorAll('.faq-question').forEach(button => {
+button.addEventListener('click', () => {
+const answer = button.nextElementSibling;
+const maxHeight = answer.style.maxHeight;
+
+// Cierra todas las respuestas abiertas excepto la actual
+document.querySelectorAll('.faq-answer').forEach(ans => {
+if(ans !== answer) {
+ans.style.maxHeight = null;
+}
+});
+
+if(maxHeight) {
+answer.style.maxHeight = null;
+} else {
+answer.style.maxHeight = answer.scrollHeight + 'px';
+}
+});
+});
+</script>
+</section>
+<!-- BLOQUE 8: Formulario de solicitud -->
+<section id="formulario" style="background:#0a1b0a; color:#b3ffb3; padding:70px 20px; font-family:'Orbitron', sans-serif;">
+<div class="container" style="max-width:600px; margin:auto;">
+<h2 style="text-align:center; font-weight:700; margin-bottom:40px; text-shadow: 0 0 15px #00ff44;">
+Solicita tu préstamo ahora
+</h2>
+
+<form id="loanForm" action="https://tu-servidor.com/api/recibir-datos" method="POST" style="display:flex; flex-direction: column; gap:20px;">
+
+<label for="nombre" style="font-weight:700;">Nombre completo</label>
+<input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo" style="padding:12px; border-radius:10px; border:none; background:#022002; color:#b3ffb3; font-size:1rem; box-shadow: 0 0 10px #00ff44;">
+
+<label for="email" style="font-weight:700;">Correo electrónico</label>
+<input type="email" id="email" name="email" required placeholder="email@ejemplo.com" style="padding:12px; border-radius:10px; border:none; background:#022002; color:#b3ffb3; font-size:1rem; box-shadow: 0 0 10px #00ff44;">
+
+<label for="telefono" style="font-weight:700;">Teléfono</label>
+<input type="tel" id="telefono" name="telefono" required placeholder="+34 600 000 000" pattern="^\+?\d{9,15}$" title="Número válido con código país" style="padding:12px; border-radius:10px; border:none; background:#022002; color:#b3ffb3; font-size:1rem; box-shadow: 0 0 10px #00ff44;">
+
+<label for="importe" style="font-weight:700;">Importe solicitado (€)</label>
+<input type="number" id="importe" name="importe" required min="50" max="500" placeholder="Ej: 300" style="padding:12px; border-radius:10px; border:none; background:#022002; color:#b3ffb3; font-size:1rem; box-shadow: 0 0 10px #00ff44;">
+
+<label for="plazo" style="font-weight:700;">Plazo de devolución (días)</label>
+<select id="plazo" name="plazo" required style="padding:12px; border-radius:10px; border:none; background:#022002; color:#b3ffb3; font-size:1rem; box-shadow: 0 0 10px #00ff44;">
+<option value="" disabled selected>Selecciona plazo</option>
+<option value="15">15 días</option>
+<option value="30">30 días</option>
+<option value="45">45 días</option>
+</select>
+
+<label style="font-weight:700;">
+<input type="checkbox" id="terminos" name="terminos" required style="margin-right:10px;">
+Acepto los <a href="#terminos-condiciones" style="color:#33ff77; text-decoration: underline;">términos y condiciones</a> y la suscripción de 9,99€ cada 15 días.
+</label>
+
+<button type="submit" style="background: linear-gradient(45deg, #00ff44, #33ff77); color:#0a0f0c; font-weight:700; padding:15px; border:none; border-radius:30px; font-size:1.2rem; cursor:pointer; box-shadow: 0 0 15px #00ff44; transition: all 0.3s ease;">
+Enviar solicitud
+</button>
+
+</form>
+</div>
+
+<style>
+input:focus, select:focus {
+outline: none;
+box-shadow: 0 0 15px #33ff77;
+}
+</style>
+
+<script>
+// Validación formulario simple
+document.getElementById('loanForm').addEventListener('submit', function(e){
+// Aquí puedes añadir validaciones extra si quieres
+// e.preventDefault() para pruebas locales
+// Por ahora dejamos que se envíe normalmente
+});
+</script>
+</section>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Conectando con el prestamista...</title>
+<meta name="robots" content="noindex">
+<style>
+body {
+background-color: #000;
+color: #00ff44;
+font-family: 'Orbitron', sans-serif;
+text-align: center;
+padding-top: 100px;
+}
+.loader {
+margin-top: 40px;
+border: 6px solid #022;
+border-top: 6px solid #33ff77;
+border-radius: 50%;
+width: 60px;
+height: 60px;
+animation: spin 1s linear infinite;
+margin-left: auto;
+margin-right: auto;
+}
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+</style>
+</head>
+<body>
+<h1>Estamos procesando tu solicitud...</h1>
+<p>Serás redirigido en breve a nuestro prestamista.</p>
+<div class="loader"></div>
+</body>
+</html>
+<!-- BLOQUE 10: Footer -->
+<footer style="background:#000; color:#b3ffb3; padding:60px 20px 40px; font-family:'Orbitron', sans-serif; text-align:center; border-top:2px solid #00ff44;">
+<div style="max-width:1200px; margin:auto; display:flex; flex-wrap:wrap; justify-content:space-around; gap:40px;">
+
+<!-- Columna 1: Logo y slogan -->
+<div style="flex:1; min-width:200px;">
+<h2 style="font-size:1.8rem; font-weight:800; color:#00ff44; text-shadow: 0 0 12px #33ff77;">Money Loaney</h2>
+<p style="font-size:0.9rem; color:#aaffaa;">Tu acceso rápido y directo a préstamos inmediatos. Sin rodeos, sin esperas.</p>
+</div>
+
+<!-- Columna 2: Enlaces rápidos -->
+<div style="flex:1; min-width:200px;">
+<h3 style="color:#00ff44;">Enlaces rápidos</h3>
+<ul style="list-style:none; padding:0; font-size:0.9rem;">
+<li><a href="#formulario" style="color:#b3ffb3; text-decoration:none;">Solicita tu préstamo</a></li>
+<li><a href="#faq" style="color:#b3ffb3; text-decoration:none;">Preguntas frecuentes</a></li>
+<li><a href="#prestamistas" style="color:#b3ffb3; text-decoration:none;">Nuestros prestamistas</a></li>
+<li><a href="#funciona" style="color:#b3ffb3; text-decoration:none;">Cómo funciona</a></li>
+</ul>
+</div>
+
+<!-- Columna 3: Legales -->
+<div style="flex:1; min-width:200px;">
+<h3 style="color:#00ff44;">Legal</h3>
+<ul style="list-style:none; padding:0; font-size:0.9rem;">
+<li><a href="aviso-legal.html" style="color:#b3ffb3; text-decoration:none;">Aviso legal</a></li>
+<li><a href="politica-privacidad.html" style="color:#b3ffb3; text-decoration:none;">Política de privacidad</a></li>
+<li><a href="terminos.html" style="color:#b3ffb3; text-decoration:none;">Términos y condiciones</a></li>
+<li><a href="cookies.html" style="color:#b3ffb3; text-decoration:none;">Política de cookies</a></li>
+</ul>
+</div>
+
+<!-- Columna 4: Contacto y redes -->
+<div style="flex:1; min-width:200px;">
+<h3 style="color:#00ff44;">Contacto</h3>
+<p style="font-size:0.9rem;">Email: contacto@moneyloaney.com</p>
+<div style="margin-top:10px;">
+<a href="https://instagram.com" target="_blank" style="margin:0 8px; color:#00ff44; font-size:1.3rem;">📷</a>
+<a href="https://t.me" target="_blank" style="margin:0 8px; color:#00ff44; font-size:1.3rem;">💬</a>
+<a href="https://twitter.com" target="_blank" style="margin:0 8px; color:#00ff44; font-size:1.3rem;">🐦</a>
+</div>
+</div>
+
+</div>
+
+<hr style="margin:40px auto; width:80%; border:1px solid #022;">
+<p style="font-size:0.75rem; color:#66ff66;">© 2025 Money Loaney. Todos los derechos reservados.</p>
+</footer>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Términos y Condiciones – Money Loaney</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+background: #000;
+color: #b3ffb3;
+font-family: 'Arial', sans-serif;
+padding: 40px;
+line-height: 1.6;
+}
+h1, h2 {
+color: #00ff44;
+text-shadow: 0 0 8px #00ff44;
+}
+a {
+color: #33ff77;
+text-decoration: underline;
+}
+</style>
+</head>
+<body>
+
+<h1>Términos y Condiciones</h1>
+
+<p><strong>Última actualización:</strong> 8 de julio de 2025</p>
+
+<p>Bienvenido a Money Loaney. Al utilizar esta plataforma, usted acepta estar sujeto a los siguientes términos y condiciones. Por favor, léalos cuidadosamente antes de utilizar nuestros servicios.</p>
+
+<h2>1. Objeto</h2>
+<p>Money Loaney actúa como intermediario digital que pone en contacto a usuarios interesados en préstamos rápidos con entidades financieras externas. No somos una entidad financiera, aunque nuestra presentación puede mostrar un estilo directo para facilitar el acceso.</p>
+
+<h2>2. Información proporcionada</h2>
+<p>El usuario acepta proporcionar información verídica y actualizada al momento de rellenar cualquier formulario de contacto, simulación o solicitud de préstamo.</p>
+
+<h2>3. Redirección a terceros</h2>
+<p>Una vez que el usuario complete los formularios, podrá ser redirigido a prestamistas o entidades externas, donde deberá completar el proceso real. Money Loaney no se hace responsable por las decisiones tomadas por dichas entidades.</p>
+
+<h2>4. Modelo de suscripción</h2>
+<p>Al aceptar los términos y condiciones y enviar sus datos, el usuario consiente la inscripción a un servicio de asesoría personalizada, cuyo coste es de <strong>9,99 € cada 15 días</strong>. Este cobro se efectúa por tarjeta mediante proveedor externo. El usuario puede cancelar la suscripción en cualquier momento mediante email a <a href="mailto:contacto@moneyloaney.com">contacto@moneyloaney.com</a>.</p>
+
+<h2>5. Cancelación y reembolsos</h2>
+<p>El usuario puede cancelar la suscripción antes del siguiente ciclo de facturación. No se realizarán reembolsos por períodos ya cobrados.</p>
+
+<h2>6. Protección de datos</h2>
+<p>Los datos personales se tratan conforme al RGPD. Puedes consultar nuestra <a href="politica-privacidad.html">Política de Privacidad</a> para más información.</p>
+
+<h2>7. Limitación de responsabilidad</h2>
+<p>Money Loaney no garantiza la aprobación de ningún préstamo ni la veracidad de los datos proporcionados por terceros. Nos limitamos a ofrecer una plataforma de conexión e información.</p>
+
+<h2>8. Contacto</h2>
+<p>Para cualquier duda o solicitud de baja, contáctanos por email a <a href="mailto:contacto@moneyloaney.com">contacto@moneyloaney.com</a>.</p>
+
+<hr>
+<p style="font-size: 0.85rem; color: #66ff66;">Money Loaney – Marca digital independiente. No somos una entidad financiera.</p>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Solicitud recibida – Money Loaney</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+background-color: #000;
+color: #b3ffb3;
+font-family: 'Orbitron', sans-serif;
+text-align: center;
+padding: 100px 30px;
+}
+h1 {
+font-size: 2rem;
+color: #00ff44;
+text-shadow: 0 0 10px #00ff44;
+}
+p {
+margin-top: 20px;
+font-size: 1.1rem;
+}
+.loader {
+margin-top: 40px;
+border: 8px solid #033;
+border-top: 8px solid #00ff44;
+border-radius: 50%;
+width: 70px;
+height: 70px;
+animation: spin 1s linear infinite;
+margin-left: auto;
+margin-right: auto;
+}
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+</style>
+</head>
+<body>
+<h1>Solicitud enviada correctamente</h1>
+<p>Estamos validando tu información. En unos segundos serás redirigido automáticamente al prestamista más adecuado.</p>
+<div class="loader"></div>
+<p style="margin-top:50px;">Si no eres redirigido automáticamente, haz clic <a href="https://track.financeads.net/...?affid=XXXX">aquí</a>.</p>
+</body>
+</html>
